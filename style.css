@@ -23,7 +23,7 @@ body{
 }
 
 .nav-bar{
-    max-width: 1440px;
+    max-width: 992px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -55,21 +55,25 @@ hr{
 } 
 
 #lighten{
-    color: var(--grayish-blue);
+    color: var(--dark-grayish-blue);
 }
 
 nav a{
     text-decoration: none;
     font-family: var(--headings);
     text-transform: uppercase;
-    color: #000000;
+    color: var(--very-dark-blue);
     font-weight: 700;
     font-size: clamp(1rem, 1vw, 4rem);
 }
 
 nav a:hover{
     padding: .3rem 0;
-    border-bottom: 2px solid var(--red);
+    border-bottom: 1px solid var(--very-dark-blue);
+}
+
+#lighten:last-child:hover{
+    border-bottom: 1px solid var(--dark-grayish-blue);
 }
 
 #hamburger{
@@ -77,7 +81,7 @@ nav a:hover{
 }
 
 .container{
-    max-width: 1440px;
+    max-width: 992px;
     height: 90vh;
     margin: 0 auto;
     width: 100%;
@@ -103,7 +107,7 @@ nav a:hover{
 
 #image img{
     display: block;
-    width: 150%;
+    width: 140%;
     margin-top: -3.5rem;
 }
 
@@ -117,7 +121,7 @@ nav a:hover{
     padding: .3rem .7rem;
     display: inline;
     color: var(--grayish-blue);
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 3px;
     font-family: var(--headings);
 }
@@ -131,6 +135,7 @@ nav a:hover{
     text-transform: uppercase;
     font-size: clamp(.5rem, 1vw, 5rem);
     font-weight: 700;
+    font-family: var(--headings);
 }
 
 #text h1{
@@ -138,7 +143,8 @@ nav a:hover{
     font-weight: 700;
     text-transform: uppercase;
     padding: 0 1.5rem;
-    font-size: clamp(2.3rem, 10vw, 4rem);
+    font-size: clamp(2.3rem, 5vw, 3rem);
+    color: var(--very-dark-blue);
 }
 
 #text p{
@@ -150,7 +156,7 @@ nav a:hover{
 
 button{
     padding: .5rem 1rem;
-    margin : 0 .5rem 1rem 1.5rem;
+    margin : 0 .5rem 2rem 1.5rem;
     background: var(--red);
     border : 2px solid var(--red);
     color: #fff;
@@ -161,6 +167,10 @@ button{
     letter-spacing: 1px;
     font-size: clamp(.7rem , 1vw, 5rem);
     cursor: pointer;
+}
+
+button:hover{
+    opacity: 70%;
 }
 
 @media (max-width: 768px){
@@ -223,7 +233,7 @@ button{
     }
 
     #shape{
-        height: 55vh;
+        height: 50vh;
     }
 
 }
