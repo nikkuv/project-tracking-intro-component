@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --red: hsl(0, 100%, 68%);
+    --very-dark-blue: hsl(230, 29%, 20%);
+    --dark-grayish-blue: hsl(230, 11%, 40%);
+    --grayish-blue: hsl(231, 7%, 65%);
+    --light-grayish-blue: hsl(207, 33%, 95%);
+
+    --body-font: 'Barlow', sans-serif;
+    --headings: 'Barlow Condensed', sans-serif;
+}
+
+body{
+    font-family: var(--body-font);
+    height: auto;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.nav-bar{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem;
+    height: 10%;
+    position: relative;
+}
+
+nav .nav-links{
+    width: 50%;
+    height: auto;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav li{
+    margin: .5rem;
+}
+
+hr{
+    width: 2.5%;
+    border-top: 10px dotted var(--grayish-blue);
+} 
+
+#lighten{
+    color: var(--grayish-blue);
+}
+
+nav a{
+    text-decoration: none;
+    font-family: var(--headings);
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: 700;
+    font-size: clamp(1rem, 1vw, 4rem);
+}
+
+nav a:hover{
+    padding: .3rem 0;
+    border-bottom: 2px solid var(--red);
+}
+
+#hamburger{
+    display: none;
+}
+
+.container{
+    max-width: 1440px;
+    height: 90vh;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.container > div{
+    flex: 1;
+}
+
+#shape{
+    background-color: var(--light-grayish-blue);
+    height: 50vh;
+    width: 50%;
+    position: absolute;
+    top:0;
+    right: 0;
+    border-radius: 0 0 0 50px;
+    z-index: -1;
+}
+
+#image img{
+    display: block;
+    width: 150%;
+    margin-top: -3.5rem;
+}
+
+#text .sub-heading{
+    padding: 1rem 1.5rem;
+}
+
+#text small{
+    text-transform: uppercase;
+    font-size: clamp(.7rem, 1vw, 5rem);  
+    padding: .3rem .7rem;
+    display: inline;
+    color: var(--grayish-blue);
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-family: var(--headings);
+}
+
+#new-text{
+    padding: .3rem .7rem;
+    border: 2px solid var(--very-dark-blue);
+    border-radius: 50px;
+    color: #ffffff;
+    background: var(--very-dark-blue);
+    text-transform: uppercase;
+    font-size: clamp(.5rem, 1vw, 5rem);
+    font-weight: 700;
+}
+
+#text h1{
+    font-family: var(--headings);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 1.5rem;
+    font-size: clamp(2.3rem, 10vw, 4rem);
+}
+
+#text p{
+    font-family: var(--body-font);
+    color: var(--dark-grayish-blue);
+    padding: 1rem 1.5rem;
+    font-size: clamp(1rem, 1.5vw, 3rem);
+}
+
+button{
+    padding: .5rem 1rem;
+    margin : 0 .5rem 1rem 1.5rem;
+    background: var(--red);
+    border : 2px solid var(--red);
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: var(--headings);
+    letter-spacing: 1px;
+    font-size: clamp(.7rem , 1vw, 5rem);
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+
+    .container{
+        height: 90vh;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    #text{
+        height:100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-bar{ 
+        height: 10vh;
+        position: relative;
+    }
+
+    #hamburger {
+        position: absolute;
+        display: block;
+        cursor: pointer;
+        top: 50%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    nav .nav-links{
+        display: none;
+    }
+
+    nav ul{
+        flex-direction: column;
+        background-color: #fff;
+        width: 90%;
+        box-shadow: 0 10px 50px rgba(0, 0, 0, .3);
+        position: absolute;
+        margin-top: 7rem;
+        padding: 1rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+    
+    #image img{
+        width: 100%;
+        display: block;
+        position: relative;
+        top: 40%;
+        left: 20%;
+    }
+
+    hr{
+        border: 1px solid var(--light-grayish-blue);
+        width: 90%;
+    }
+
+    #shape{
+        height: 55vh;
+    }
+
+}
