@@ -23,7 +23,7 @@ body{
 }
 
 .nav-bar{
-    max-width: 992px;
+    max-width: 1440px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -34,7 +34,7 @@ body{
 }
 
 nav .nav-links{
-    width: 50%;
+    width: 40%;
     height: auto;
 }
 
@@ -49,10 +49,12 @@ nav li{
     margin: .5rem;
 }
 
-hr{
-    width: 2.5%;
-    border-top: 10px dotted var(--grayish-blue);
-} 
+.dot{
+    height: 7px;
+    width: 7px;
+    background-color: var(--grayish-blue);
+    border-radius: 50%;
+}
 
 #lighten{
     color: var(--dark-grayish-blue);
@@ -72,7 +74,7 @@ nav a:hover{
     border-bottom: 1px solid var(--very-dark-blue);
 }
 
-#lighten:last-child:hover{
+#lighten:hover{
     border-bottom: 1px solid var(--dark-grayish-blue);
 }
 
@@ -81,7 +83,7 @@ nav a:hover{
 }
 
 .container{
-    max-width: 992px;
+    max-width: 1440px;
     height: 90vh;
     margin: 0 auto;
     width: 100%;
@@ -105,10 +107,19 @@ nav a:hover{
     z-index: -1;
 }
 
+#text{
+    max-width: 576px;
+}
+
+image{
+    max-width: 576px;
+}
+
 #image img{
     display: block;
-    width: 140%;
-    margin-top: -3.5rem;
+    width: 120%;
+    position: relative;
+    left: 12%;
 }
 
 #text .sub-heading{
@@ -192,6 +203,13 @@ button:hover{
         position: relative;
     }
 
+    nav .dot{
+        width: 80vw;
+        height: 1px;
+        background: var(--light-grayish-blue);
+        border-radius: 0;
+    }
+
     #hamburger {
         position: absolute;
         display: block;
@@ -222,15 +240,11 @@ button:hover{
     #image img{
         width: 100%;
         display: block;
-        position: relative;
+         /* position: relative;
         top: 40%;
-        left: 20%;
+        left: 20%; */
     }
 
-    hr{
-        border: 1px solid var(--light-grayish-blue);
-        width: 90%;
-    }
 
     #shape{
         height: 50vh;
