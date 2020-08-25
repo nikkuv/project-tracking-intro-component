@@ -99,7 +99,7 @@ nav a:hover{
 #shape{
     background-color: var(--light-grayish-blue);
     height: 50vh;
-    width: 50%;
+    width: 45%;
     position: absolute;
     top:0;
     right: 0;
