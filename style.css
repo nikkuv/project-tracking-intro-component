@@ -23,7 +23,7 @@ body{
 }
 
 .nav-bar{
-    max-width: 1440px;
+    max-width: 990px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -83,7 +83,7 @@ nav a:hover{
 }
 
 .container{
-    max-width: 1440px;
+    max-width: 990px;
     height: 90vh;
     margin: 0 auto;
     width: 100%;
@@ -117,9 +117,9 @@ image{
 
 #image img{
     display: block;
-    width: 120%;
+    width: 150%;
     position: relative;
-    left: 12%;
+    left: 20%;
 }
 
 #text .sub-heading{
